@@ -1,0 +1,2 @@
+#!/bin/bash
+curl --header "Content-Type:application/xml" --data '<?xml version="1.0" encoding="UTF-8"?><methodCall><methodName>download_list</methodName><params></params></methodCall>' --user usr00001:PasswordHere123! https://s1-rutorrent.seedboxws.com/plugins/httprpc/action.php
