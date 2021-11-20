@@ -28,10 +28,11 @@ xmlrpc https://example.com/plugins/httprpc/action.php <ACTION> <HASH> -username=
 
 * wsgeneric-all.sh - same as above, but for all torrents at once rather than for a specific hash. Only need to specify action.
 
+* wsdiskspace.sh - check available disk space. Not a XML-RPC script, relies on wget, jq and bc. Gets JSON data from /plugins/diskspace/action.php.
 
 (Main scripts and examples use xmlrpc command, cURL clones/alternatives are present in cURL-alternatives folder, with hardcoded XMLs taken from the xmlrpc commands. Those scripts are for when xmlrpc isn't available on a certain distro or app like Termux. You can use this way in other code languages too, like PHP. Outputs will be XML).
 
 
 Two SFTP scripts:
-- sendfile.sh - for sending a file through the commandline. I never use this script anymore, I just sFTP into the box manually now.
-- checkspace.sh - for checking free diskspace for your account. May take a few seconds to calculate.
+- sendfile.sh - for sending a file through the commandline. I never use this script anymore, I just SFTP into the box manually now.
+- checkspace.sh - for checking free diskspace for your account. May take a few seconds to calculate. After feedback from the SeedboxWS admins, this script is now outdated given that we have a more supported script in the form of 'wsdiskspace.sh' (in the root folder of this project), which is much more efficient than using SFTP.
