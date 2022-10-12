@@ -30,6 +30,8 @@ xmlrpc https://example.com/plugins/httprpc/action.php <ACTION> <HASH> -username=
 
 * wsdiskspace.sh - check available disk space. Not a XML-RPC script, relies on wget, jq and bc. Gets JSON data from /plugins/diskspace/action.php.
 
+* wsreboot.sh - reboot seedbox. Not a XML-RPC script, relies on wget. Sends GET request to /assets/php/seedbox/reboot.php and reports whether reboot was successful or not.
+
 (Main scripts and examples use xmlrpc command, cURL clones/alternatives are present in cURL-alternatives folder, with hardcoded XMLs taken from the xmlrpc commands. Those scripts are for when xmlrpc isn't available on a certain distro or app like Termux. You can use this way in other code languages too, like PHP. Outputs will be XML).
 
 
